@@ -4,7 +4,7 @@ interface CarCardProps {
     type: string;
     image: string;
     price: string;
-    capacity: string;
+    capacity: number;
   }
   
   const CarCard: React.FC<CarCardProps> = ({ id, name, type, image, price, capacity }) => {

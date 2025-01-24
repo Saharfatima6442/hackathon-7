@@ -1,9 +1,12 @@
+'use client';
+
 import React from "react";
 import { useSearchParams } from "next/navigation";
 
-const searchParams = useSearchParams();
-  const carId = searchParams.get("id");
 const Billing: React.FC = () => {
+  const searchParams = useSearchParams();
+  const carId = searchParams?.get("id") || "default-id"; // Fallback to default-id if id is missing
+
   return (
     <div className="flex flex-col items-center bg-gray-100 min-h-screen p-8">
       <div className="max-w-6xl w-full bg-white shadow-md rounded-lg p-8">
@@ -93,7 +96,7 @@ const Billing: React.FC = () => {
                   className="w-16 h-16 object-cover rounded-md"
                 />
                 <div>
-                  <h3 className="text-sm font-semibold">Nissan GT – R</h3>
+                  <h3 className="text-sm font-semibold">Car ID: {carId}</h3>
                   <p className="text-xs text-gray-400">440+ Reviewer</p>
                 </div>
               </div>
