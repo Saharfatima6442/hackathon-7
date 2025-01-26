@@ -1,5 +1,6 @@
 'use client';
 
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 const RecommendationCarSection: React.FC = () => {
@@ -113,7 +114,7 @@ const RecommendationCarSection: React.FC = () => {
                 </div>
   
                 {/* Car Image */}
-                <img
+                <Image
                   src={car.image}
                   alt={car.name}
                   className="w-full h-40 object-contain rounded-md mb-4"

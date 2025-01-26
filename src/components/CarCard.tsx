@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface CarCardProps {
     id: number;
     name: string;
@@ -10,7 +12,7 @@ interface CarCardProps {
   const CarCard: React.FC<CarCardProps> = ({ id, name, type, image, price, capacity }) => {
     return (
       <div className="bg-white rounded-lg shadow-md p-4">
-        <img
+        <Image
           src={image}
           alt={name}
           className="w-full h-40 object-contain rounded-md mb-4"

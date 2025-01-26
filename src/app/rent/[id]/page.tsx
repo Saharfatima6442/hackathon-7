@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import ReviewCard from '@/components/ReviewCard';
 import CarCard from '@/components/CarCard';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const CarDetails: React.FC = () => {
   const searchParams = useSearchParams();
@@ -120,7 +121,7 @@ const CarDetails: React.FC = () => {
           <div className="bg-white rounded-lg shadow-lg p-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <div>
-                <img
+                <Image
                   src={carDetails.image}
                   alt={carDetails.name}
                   className="w-full h-64 object-contain rounded-lg"
@@ -128,7 +129,7 @@ const CarDetails: React.FC = () => {
                 <div className="flex mt-4 space-x-4">
                   {carDetails.thumbnails?.length > 0 ? (
                     carDetails.thumbnails.map((thumb, index) => (
-                      <img
+                      <Image
                         key={index}
                         src={thumb}
                         alt={`Thumbnail ${index + 1}`}

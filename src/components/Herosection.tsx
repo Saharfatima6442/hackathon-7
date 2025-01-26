@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const HeroSection: React.FC = () => {
     const cards = [
       {
@@ -36,7 +38,7 @@ const HeroSection: React.FC = () => {
                 </button>
               </div>
               <div className="w-[406px] h-[116x] flex justify-items-end align-bottom">
-                <img
+                <Image
                   src={card.image}
                   alt={card.title}
                   className="w-[406px] h-[116px] object-contain flex justify-end align-bottom"

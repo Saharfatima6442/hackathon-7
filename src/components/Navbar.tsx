@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Navbar: React.FC = () => {
   return (
     <nav className="bg-[#ffffff] py-4 w-[1440px] h-[124px]">
@@ -69,7 +71,7 @@ const Navbar: React.FC = () => {
           </button>
 
           {/* Profile Avatar */}
-          <img
+          <Image
             src="/Image.png"
             alt="Profile"
             className="h-10 w-10 rounded-full border border-gray-300"

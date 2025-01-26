@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const ShowMoreCars: React.FC = () => {
   const [selectedType, setSelectedType] = useState<string[]>([]);
@@ -171,7 +172,7 @@ const ShowMoreCars: React.FC = () => {
                   key={car.id}
                   className="bg-white rounded-lg shadow-md p-4 flex flex-col"
                 >
-                  <img
+                  <Image
                     src={car.image}
                     alt={car.name}
                     className="w-full h-40 object-contain rounded-md mb-4"
