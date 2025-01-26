@@ -6,6 +6,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ReviewCard from '@/components/ReviewCard';
 import CarCard from '@/components/CarCard';
+import Link from 'next/link';
 
 const CarDetails: React.FC = () => {
   const searchParams = useSearchParams();
@@ -176,12 +177,14 @@ const CarDetails: React.FC = () => {
                   </p>
 
                   {/* Rent Now Button */}
+                  <Link href={"/billings"}>
                   <button
                     onClick={handleRentNow}
                     className="mt-4 bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600"
                   >
                     Rent Now
                   </button>
+                  </Link>
                 </div>
               </div>
             </div>
