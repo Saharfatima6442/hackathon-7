@@ -9,7 +9,7 @@ interface CarCardProps {
     capacity: number;
   }
   
-  const CarCard: React.FC<CarCardProps> = ({ id, name, type, image, price, capacity }) => {
+  const CarCard: React.FC<CarCardProps> = ({ name, type, image, price, capacity }) => {
     return (
       <div className="bg-white rounded-lg shadow-md p-4">
         <Image
