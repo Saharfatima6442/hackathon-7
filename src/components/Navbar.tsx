@@ -2,21 +2,22 @@ import Image from "next/image";
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="bg-[#ffffff] py-4 w-[1440px] h-[124px]">
-      <div className="container mx-auto flex items-center justify-between px-4">
+    <nav className="bg-white py-4 w-full shadow-md">
+      <div className="container mx-auto flex items-center justify-between px-6">
         {/* Logo Section */}
         <div className="flex items-center">
           <h1 className="text-blue-600 text-2xl font-bold">MORENT</h1>
         </div>
 
         {/* Search Bar */}
-        <div className="flex items-center bg-white rounded-lg shadow-md px-4 py-2 w-1/2">
+        <div className="flex items-center bg-gray-100 rounded-lg shadow-sm px-4 py-2 w-full max-w-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5 text-gray-500"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
+            aria-label="Search icon"
           >
             <path
               strokeLinecap="round"
@@ -28,14 +29,18 @@ const Navbar: React.FC = () => {
           <input
             type="text"
             placeholder="Search something here"
-            className="ml-4 w-full border-none focus:ring-0 text-sm text-gray-700"
+            className="ml-4 w-full bg-transparent border-none focus:ring-0 text-sm text-gray-700"
+            aria-label="Search input"
           />
         </div>
 
         {/* Icon Section */}
         <div className="flex items-center space-x-6">
           {/* Heart Icon */}
-          <button className="text-gray-600 hover:text-red-500 fill-red-600">
+          <button
+            className="text-gray-600 hover:text-red-500"
+            aria-label="Favorites"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -53,7 +58,10 @@ const Navbar: React.FC = () => {
           </button>
 
           {/* Settings Icon */}
-          <button className="text-gray-600 hover:text-blue-500">
+          <button
+            className="text-gray-600 hover:text-blue-500"
+            aria-label="Settings"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -74,7 +82,10 @@ const Navbar: React.FC = () => {
           <Image
             src="/Image.png"
             alt="Profile"
-            className="h-10 w-10 rounded-full border border-gray-300"
+            width={44}
+            height={44}
+            className="rounded-full border border-gray-300"
+            layout="intrinsic"
           />
         </div>
       </div>

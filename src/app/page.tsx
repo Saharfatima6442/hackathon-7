@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/Herosection';
